@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+	head
+		include includes/_head.pug
+		title Page Title
+
+	body
+		include includes/_header.pug
+		main
+			p main
+
+			ul
+				li item 1
+				li item 1
+				li item 1
+				
+		include includes/_footer.pug
+
+		script.
+			$(document).ready(function() {
+				$('body').addClass("inlineScriptTest");
+			});
