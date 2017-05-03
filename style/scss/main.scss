@@ -7,8 +7,10 @@
   'abstracts/mixins'; 
 
 // 2. Vendors
-@import
-  'vendor/normalize';
+// uncomment the below when the most recent version of bootstrap has been added
+// to the style/vendor directory
+//@import
+  //'vendor/bootstrap';
   
 
 // 3. Base stuff

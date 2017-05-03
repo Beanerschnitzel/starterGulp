@@ -2,21 +2,20 @@ doctype html
 html(lang="en")
 	head
 		include includes/_head.pug
-		title Page Title
+		title [client name]
 
 	body
-		include includes/_header.pug
 		main
-			p main
-
-			ul
-				li item 1
-				li item 1
-				li item 1
-				
-		include includes/_footer.pug
-
-		script.
-			$(document).ready(function() {
-				$('body').addClass("inlineScriptTest");
-			});
+			.container
+				table(width="100%").table.table-striped
+					thead
+						tr
+							th #
+							th Page Template
+							th Info
+					tbody
+						tr
+							th(scope='row') 001
+							td
+								a(href='home.html') Home
+							td in progress
