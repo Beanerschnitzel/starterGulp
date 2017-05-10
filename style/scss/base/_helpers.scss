@@ -2,3 +2,77 @@
 // This file contains CSS helper classes.
 // -----------------------------------------------------------------------------
 
+//loop through each color in the map and modify the colors
+@each $name, $value in $colorsBrand {
+    $lightest: mix($colorWhite, $value, 75%);
+    $lighter: mix($colorWhite, $value, 50%);
+    $light: mix($colorWhite, $value, 25%);
+    $dark: mix($colorBlack, $value, 25%);
+    $darker: mix($colorBlack, $value, 50%);
+    $darkest: mix($colorBlack, $value, 75%);
+//generate text color classes
+  .#{$name}Lightest {
+    color: $lightest !important;
+  }
+  .#{$name}Lighter {
+    color: $lighter !important;
+  }
+  .#{$name}Light {
+    color: $light !important;
+  }
+  .#{$name} {
+    color: $value !important;
+  }
+  .#{$name}Dark {
+    color: $dark !important;
+  }
+  .#{$name}Darker {
+    color: $darker !important;
+  }
+  .#{$name}Darkest {
+    color: $darkest !important;
+  }
+//generate background color classes using the capitalize function for BEM-ish camelcase
+  .fill#{capitalize($name)}Lightest {
+    background-color: $lightest !important;
+    &, a:not(.btn), a:not(.btn):hover {
+        color: color-contrast($lightest);
+    }
+  }
+  .fill#{capitalize($name)}Lighter {
+    background-color: $lighter !important;
+    &, a:not(.btn), a:not(.btn):hover {
+        color: color-contrast($lighter);
+    }
+  }
+  .fill#{capitalize($name)}Light {
+    background-color: $light !important;
+    &, a:not(.btn), a:not(.btn):hover {
+        color: color-contrast($light);
+    }
+  }
+  .fill#{capitalize($name)} {
+    background-color: $value !important;
+    &, a:not(.btn), a:not(.btn):hover {
+        color: color-contrast($value);
+    }
+  }
+  .fill#{capitalize($name)}Dark {
+    background-color: $dark !important;
+    &, a:not(.btn), a:not(.btn):hover {
+        color: color-contrast($dark);
+    }
+  }
+  .fill#{capitalize($name)}Darker {
+    background-color: $darker !important;
+    &, a:not(.btn), a:not(.btn):hover {
+        color: color-contrast($darker);
+    }
+  }
+  .fill#{capitalize($name)}Darkest {
+    background-color: $darkest !important;
+    &, a:not(.btn), a:not(.btn):hover {
+        color: color-contrast($darkest);
+    }
+  }
+}
