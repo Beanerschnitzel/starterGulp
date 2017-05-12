@@ -151,14 +151,17 @@ html(lang="en")
 						a(href='http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/', target='_blank') BEM
 						|  naming syntax for custom elements. The modified version used is based largely on 
 						a(href='http://nicolasgallagher.com/about-html-semantics-front-end-architecture/', target='_blank') Nicolas Gallagher's extended BEM syntax
-						| . The intention is to make the styles more readable and understandable for humans.
+						| . The intention is to make the classes more understandable for humans, scoped where necessary, and also easily selectable in editors.
 					ul.sg-blockList
 						li
 							span.sg-iconAttention.sg-colorDanger
-								| Note though that class names composed of two or more words are written in 
+								| Note that class names composed of two or more words are written in 
 								a(href='http://msdn.microsoft.com/en-us/library/x2dbyw72%28v=vs.71%29.aspx', target='_blank') camelCase
 								|  as opposed to Gallagher's 
 								a(href='http://msdn.microsoft.com/en-us/library/x2dbyw72%28v=vs.71%29.aspx', target='_blank') PascalCase
+						li
+							span.sg-iconAttention.sg-colorDanger
+								| Note the major difference from BEM is the use of hyphens as opposed to underscores preceeding a descendant in a class name 
 						li
 							span.sg-iconAttention.sg-colorDanger
 								| This naming convention is to be used on 
